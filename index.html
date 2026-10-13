@@ -919,6 +919,14 @@ h1.fh{display:flex;align-items:center;gap:22px;color:var(--c);font-size:72px}
 #s-bar .basics{display:flex;gap:12px;margin-top:22px}
 #s-bar .basics span{font-size:20px;font-weight:600;color:#8A8EA6;background:#F3F3F8;border-radius:99px;padding:10px 20px}
 #s-bar .bnext{position:absolute;right:150px;bottom:60px;font-size:24px;font-weight:600;color:var(--accent)}
+
+#s-bar .bh{top:96px}
+#s-bar .bs2{font-size:30px;font-weight:700;letter-spacing:.01em;color:var(--accent)}
+#s-bar .bt2{font-size:76px;font-weight:700;letter-spacing:-.04em;line-height:1.04;margin-top:16px;max-width:1500px}
+#s-bar .bt2 em{font-style:normal;color:var(--accent)}
+#s-bar .lv{top:450px}
+#s-bar .lvgap{top:215px;height:130px}
+#s-bar .lvlo{top:380px}
 </style>
 </head>
 <body>
@@ -948,7 +956,7 @@ h1.fh{display:flex;align-items:center;gap:22px;color:var(--c);font-size:72px}
 <!-- =============================== 2 · SIX PRODUCTS =============================== -->
 <section class="slide" id="s-six">
   <header class="hd">
-    <div><h2>EliseAI Leasing</h2><p>6 products producing exceptional performance across lead-to-lease workflows</p></div>
+    <div><h2>EliseAI Leasing</h2><p>At EliseAI, leasing is six products that push leasing performance higher</p></div>
     <div class="k">Product Overview</div>
   </header>
   <svg class="w" viewBox="0 0 1920 1080" style="position:absolute;inset:0">
@@ -998,8 +1006,8 @@ h1.fh{display:flex;align-items:center;gap:22px;color:var(--c);font-size:72px}
 <!-- =============================== 4 · THE BAR IS HIGHER =============================== -->
 <section class="slide" id="s-bar">
   <div class="bh">
-    <div class="bt in" style="--d:.1s">But now the bar is <em>higher</em></div>
-    <div class="bs in" style="--d:.35s">AI can now do much more than answer questions and book tours.</div>
+    <div class="bs2 in" style="--d:.1s">But now the bar is higher</div>
+    <div class="bt2 in" style="--d:.25s">AI can push leasing performance<br><em>higher than previously possible</em></div>
   </div>
   <div class="lv">
     <div class="lvhi">
@@ -1030,10 +1038,10 @@ h1.fh{display:flex;align-items:center;gap:22px;color:var(--c);font-size:72px}
     <p class="sub in" style="--d:.2s">A leasing AI on its own doesn't know the three things every lease-up depends on</p>
   </div>
   <div class="three">
-    <div class="k" style="--d:.4s"><div class="n">01</div><h3>When homes will actually exist</h3>
+    <div class="k" style="--d:.4s"><div class="n">01</div><h3>Which units exist</h3>
       <p>Pre-leasing and move-in dates live in a project plan, not the PMS. Until units go live, there's nothing to sell.</p>
       <div class="vs"><div class="x"><i>✕</i>"We don't have availability right now."</div><div class="y"><i>✓</i>"Pre-leasing opens this winter. First move-ins Jan 12."</div></div></div>
-    <div class="k" style="--d:.55s"><div class="n">02</div><h3>What to sell before units go live</h3>
+    <div class="k" style="--d:.55s"><div class="n">02</div><h3>When they become available</h3>
       <p>Floor plans, price ranges and lease-up specials, before a single unit is live.</p>
       <div class="vs"><div class="x"><i>✕</i>"Pricing isn't available yet."</div><div class="y"><i>✓</i>"Two-beds start at $2,950, with 6 weeks free."</div></div></div>
     <div class="k" style="--d:.7s"><div class="n">03</div><h3>Who to hold for later</h3>
@@ -1739,8 +1747,8 @@ const steps=[
   {t:'Webchat &amp; initial inquiry',m:[['me','Do you have any 2 beds available?'],['ai','Yes! Three, starting at $2,840.']],o:1},
   {t:'Unit-level amenity matching',m:[['ai','Unit 412 has the in-unit W/D and south light you wanted.']],o:0},
   {t:'Dynamic pre-tour follow-up',m:[['me','Something came up. Can we do 2pm?'],['ai','Done. Moved you to Sat at 2:00.']],o:0},
-  {t:'Tour reminders',m:[['ai','See you tomorrow at 2! Park in the side lot.']],o:1},
-  {t:'Post-tour follow-up',m:[['ai','How did 412 feel? Want me to hold it for you?']],o:0},
+  {t:'Tour scheduling',m:[['me','Can I see it this weekend?'],['ai','Sure! Saturday at 11:00 or 2:00?']],o:1},
+  {t:'Dynamic post-tour follow-up',m:[['ai','How did 412 feel? Want me to hold it for you?']],o:0},
   {t:'Application Q&amp;A &amp; alerts',m:[['me','Do I need a co-signer?'],['ai','Only if rent is over 30% of income.']],o:0},
 ];
 (function(){
