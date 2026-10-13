@@ -1589,6 +1589,25 @@ h1.fh{display:flex;align-items:center;gap:22px;color:var(--c);font-size:72px}
   <div class="note">Illustrative. Per 1,000 leads, assuming a 10% baseline lead-to-lease rate and each product's measured lift applied in sequence. Lease Up Support applies to lease-up communities. Fee Transparency and Team Optimization add further lift that isn't quantified here. Not a guarantee of results.</div>
 </section>
 
+<!-- =============================== 18 · MOVING TARGET =============================== -->
+<section class="slide" id="s-more" style="--c:var(--accent)">
+  <div class="head">
+    <div class="eyebrow in">A moving target</div>
+    <h1 class="in" style="--d:.1s">And we keep adding new products</h1>
+    <p class="sub in" style="--d:.2s">The six products are the foundation. New capabilities ship on top of them every week.</p>
+  </div>
+  <div class="core6">
+    <div style="--c:var(--c1);--t:var(--t1);--d:.3s"><i></i><b>Lease Up Support</b></div>
+    <div style="--c:var(--c2);--t:var(--t2);--d:.38s"><i></i><b>Central AI</b></div>
+    <div style="--c:var(--c3);--t:var(--t3);--d:.46s"><i></i><b>Personalization Suite</b></div>
+    <div style="--c:var(--c4);--t:var(--t4);--d:.54s"><i></i><b>Brand Suite</b></div>
+    <div style="--c:var(--c5);--t:var(--t5);--d:.62s"><i></i><b>Fee Transparency Suite</b></div>
+    <div style="--c:var(--c6);--t:var(--t6);--d:.7s"><i></i><b>Team Optimization</b></div>
+  </div>
+  <div class="newhd in" style="--d:.8s"><span class="k">Shipped for leasing in the last 60 days</span><span class="cnt"><b id="mCount">0</b>new</span></div>
+  <div class="newgrid" id="mGrid"></div>
+</section>
+
 <!-- =============================== 19 · CHART =============================== -->
 <section class="slide" id="s-chart" style="--c:var(--accent)">
   <div class="head">
@@ -2143,7 +2162,7 @@ addEventListener('keydown',e=>{if(e.key==='o'||e.key==='O')goId('s-six')});
 
 /* ============================== pnav (deckroom-style jumper) ============================== */
 (function(){
-  const SECS=[['Intro','s-title'],['Overview','s-six'],['The basics','s-basics'],['01 Lease Up Support','s-lu1'],['02 Central AI','s-c1'],['03 Personalization','s-psub'],['04 Brand Suite','s-b0'],['05 + 06 Fee & Team','s-fx'],['05 Fee Transparency','s-f1'],['06 Team Optimization','s-ab'],['Combined impact','s-all'],['Results','s-chart']];
+  const SECS=[['Intro','s-title'],['Overview','s-six'],['The basics','s-basics'],['01 Lease Up Support','s-lu1'],['02 Central AI','s-c1'],['03 Personalization','s-psub'],['04 Brand Suite','s-b0'],['05 + 06 Fee & Team','s-fx'],['05 Fee Transparency','s-f1'],['06 Team Optimization','s-ab'],['Combined impact','s-all'],["What's next",'s-more'],['Results','s-chart']];
   const at=id=>slides.findIndex(x=>x.id===id);
   const st=SECS.map(([n,id])=>[n,at(id)]).filter(x=>x[1]>=0).sort((a,b)=>a[1]-b[1]);
   const groups=st.map(([n,i],k)=>({n,from:i,to:(k+1<st.length?st[k+1][1]:slides.length)-1}));
