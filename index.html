@@ -927,6 +927,17 @@ h1.fh{display:flex;align-items:center;gap:22px;color:var(--c);font-size:72px}
 #s-bar .lv{top:450px}
 #s-bar .lvgap{top:215px;height:130px}
 #s-bar .lvlo{top:380px}
+
+/* ---------- every building, every stage ---------- */
+#s-ebes .ebes{position:absolute;left:112px;right:112px;top:330px;bottom:170px;display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+#s-ebes .eb{border-radius:22px;border:1.5px solid var(--line);background:#fff;padding:28px 26px;display:flex;flex-direction:column}
+#s-ebes .eb h3{font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--ink);min-height:66px}
+#s-ebes .eb .nd{font-size:20px;color:var(--c);font-weight:600;line-height:1.3;margin-top:10px;padding-bottom:18px;border-bottom:1px solid var(--line);min-height:68px}
+#s-ebes .eb ul{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:20px}
+#s-ebes .eb li{font-size:22px;line-height:1.34;color:var(--body);padding-left:22px;position:relative}
+#s-ebes .eb li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:9px;border-radius:50%;background:var(--c)}
+#s-ebes .eb.hi{background:linear-gradient(170deg,var(--t),#fff 75%);border-color:color-mix(in srgb,var(--c) 45%,#fff)}
+#s-ebes .eb .next{margin-top:auto;padding-top:16px;font-size:19px;font-weight:600;color:var(--c)}
 </style>
 </head>
 <body>
@@ -973,7 +984,7 @@ h1.fh{display:flex;align-items:center;gap:22px;color:var(--c);font-size:72px}
   </svg>
   <div class="hub"><div><div class="k">Product Suite</div><div class="t">Leasing</div><div class="s">Email, SMS, Voice</div><div class="p">Powered by Apollo</div></div></div>
 
-  <article data-goto="s-lu1" title="Jump to this section" class="pc l c1" style="--c:var(--c1);--t:var(--t1);--d:.35s"><div class="row"><span class="n">01</span><h3>Every Building, Every Stage</h3></div>
+  <article data-goto="s-ebes" title="Jump to this section" class="pc l c1" style="--c:var(--c1);--t:var(--t1);--d:.35s"><div class="row"><span class="n">01</span><h3>Every Building, Every Stage</h3></div>
     <ul><li>Market rate, affordable, student &amp; single family</li><li>Lease-ups &amp; new developments</li></ul>
     <div class="tagrow"><div class="tag"><b>+130bps</b><span>lead-to-lease</span></div><span class="oa">Other AI <b>+0bps</b></span></div></article>
   <article data-goto="s-c1" title="Jump to this section" class="pc l c2" style="--c:var(--c2);--t:var(--t2);--d:.45s"><div class="row"><span class="n">02</span><h3>Central AI</h3></div>
@@ -1028,6 +1039,28 @@ h1.fh{display:flex;align-items:center;gap:22px;color:var(--c);font-size:72px}
     </div>
   </div>
   <div class="bnext in" style="--d:2.2s">Let's look at each one →</div>
+</section>
+
+<!-- =============================== 01 · EVERY BUILDING, EVERY STAGE (overview) =============================== -->
+<section class="slide" id="s-ebes" style="--c:var(--c1);--t:var(--t1)">
+  <div class="head">
+    <div class="eyebrow in"><span class="rocks" data-i="1"></span>01&nbsp;&nbsp;Every Building, Every Stage</div>
+    <h1 class="in" style="--d:.1s">One leasing AI for every building</h1>
+    <p class="sub in" style="--d:.2s">The AI changes how it qualifies, prices and tours for each type of property</p>
+  </div>
+  <div class="ebes">
+    <div class="eb in" style="--d:.3s"><h3>Market rate</h3><p class="nd">Fast answers, the right unit, a booked tour</p>
+      <ul><li>Recommends units by budget and preferences</li><li>Books in-person, self-guided and virtual tours</li><li>Speaks 50+ languages by text, 7 by voice</li></ul></div>
+    <div class="eb in" style="--d:.4s"><h3>Affordable</h3><p class="nd">Qualify the household before the tour</p>
+      <ul><li>Pre-qualifies income and household size against AMI limits, per unit and program</li><li>Qualifies housing vouchers by approved unit size</li><li>Saves income, voucher and ADA needs to the guest card</li></ul></div>
+    <div class="eb in" style="--d:.5s"><h3>Student</h3><p class="nd">Beds, terms and roommates, not just units</p>
+      <ul><li>Prices by the bed and by lease term</li><li>Explains private vs. shared rooms and roommate matching</li><li>Follows up with guarantors</li></ul></div>
+    <div class="eb in" style="--d:.6s"><h3>Single family</h3><p class="nd">One prospect, many scattered homes</p>
+      <ul><li>Groups homes by neighborhood and market</li><li>Self-guided tours with lockboxes and smart locks</li><li>Follow-ups with the exact date each home is available</li></ul></div>
+    <div class="eb hi in" style="--d:.7s"><h3>Lease-ups &amp; new developments</h3><p class="nd">Sell homes before they exist</p>
+      <ul><li>Knows pre-leasing and building open dates</li><li>Quotes price ranges before units go live</li><li>Interest list notifies prospects when homes release</li></ul>
+      <div class="next">Deep dive next &rarr;</div></div>
+  </div>
 </section>
 
 <!-- =============================== 5 · LEASE UP (problem) =============================== -->
@@ -2182,7 +2215,7 @@ addEventListener('keydown',e=>{if(e.key==='o'||e.key==='O')goId('s-six')});
 
 /* ============================== pnav (deckroom-style jumper) ============================== */
 (function(){
-  const SECS=[['Intro','s-title'],['Overview','s-six'],['The basics','s-basics'],['01 Every Building, Every Stage','s-lu1'],['02 Central AI','s-c1'],['03 Personalization','s-psub'],['04 Brand Suite','s-b0'],['05 Fee Transparency','s-f1'],['06 Team Optimization','s-ab'],['Combined impact','s-all'],['What\u2019s next','s-more'],['Results','s-chart']];
+  const SECS=[['Intro','s-title'],['Overview','s-six'],['The basics','s-basics'],['01 Every Building, Every Stage','s-ebes'],['02 Central AI','s-c1'],['03 Personalization','s-psub'],['04 Brand Suite','s-b0'],['05 Fee Transparency','s-f1'],['06 Team Optimization','s-ab'],['Combined impact','s-all'],['What\u2019s next','s-more'],['Results','s-chart']];
   const at=id=>slides.findIndex(x=>x.id===id);
   const st=SECS.map(([n,id])=>[n,at(id)]).filter(x=>x[1]>=0).sort((a,b)=>a[1]-b[1]);
   const groups=st.map(([n,i],k)=>({n,from:i,to:(k+1<st.length?st[k+1][1]:slides.length)-1}));
