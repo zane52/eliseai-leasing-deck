@@ -904,6 +904,16 @@ h1.fh{display:flex;align-items:center;gap:22px;color:var(--c);font-size:72px}
 #s-ebes .eb li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:9px;border-radius:50%;background:var(--c)}
 #s-ebes .eb.hi{background:linear-gradient(170deg,var(--t),#fff 75%);border-color:color-mix(in srgb,var(--c) 45%,#fff)}
 #s-ebes .eb .next{margin-top:auto;padding-top:16px;font-size:19px;font-weight:600;color:var(--c)}
+
+/* ---------- how to use this deck ---------- */
+#s-how .howgrid{position:absolute;left:112px;right:112px;top:330px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+#s-how .hq{display:block;border-radius:20px;border:1.5px solid color-mix(in srgb,var(--c) 28%,#fff);background:linear-gradient(165deg,var(--t),#fff 70%);padding:22px 26px 24px;cursor:pointer;text-decoration:none;min-height:232px;transition:transform .2s,box-shadow .2s}
+#s-how .hq:hover{transform:translateY(-3px);box-shadow:0 18px 36px -24px rgba(18,22,51,.45)}
+#s-how .hn{display:flex;align-items:center;gap:12px;font-size:22px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+#s-how .hn span{font-size:15px;font-weight:700;color:#fff;background:var(--c);border-radius:99px;padding:4px 10px}
+#s-how .hq p{font-size:28px;line-height:1.3;color:var(--ink);margin-top:16px;font-weight:500;letter-spacing:-.01em}
+#s-how .master{position:absolute;left:112px;right:112px;bottom:96px;border-radius:22px;background:var(--ink);color:#fff;padding:26px 34px;font-size:36px;font-weight:700;letter-spacing:-.02em;display:flex;align-items:center;gap:26px}
+#s-how .master span{flex:none;font-size:16px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#B9AEFF}
 </style>
 </head>
 <body>
@@ -968,6 +978,25 @@ h1.fh{display:flex;align-items:center;gap:22px;color:var(--c);font-size:72px}
     <ul><li>Call scoring</li><li>Human touch automations</li><li>Performance &amp; task resolution reporting</li></ul>
     <div class="tagrow"><div class="tag"><b>+47%</b><span>task resolution</span></div><span class="oa">Other AI <b>+0%</b></span></div></article>
   <div class="foot"><div>Lift vs. baseline. Source: EliseAI customer data.</div><div>EliseAI</div></div>
+</section>
+
+<!-- =============================== HOW TO USE THIS DECK =============================== -->
+<section class="slide" id="s-how" style="--c:var(--accent)">
+  <div class="head">
+    <div class="eyebrow in">How to use this deck</div>
+    <h1 class="in" style="--d:.1s">One question for each product</h1>
+    <p class="sub in" style="--d:.2s">Ask the questions. Then go to the products that matter most to this operator.</p>
+  </div>
+  <div class="howgrid">
+    <a class="hq in" data-goto="s-ebes" style="--c:var(--c1);--t:var(--t1);--d:0.25s"><div class="hn"><span>01</span>Every Building, Every Stage</div><p>&ldquo;Do you have any lease-ups? What about affordable components?&rdquo;</p></a>
+    <a class="hq in" data-goto="s-c1" style="--c:var(--c2);--t:var(--t2);--d:0.33s"><div class="hn"><span>02</span>Central AI</div><p>&ldquo;Are there any cities where you have multiple buildings?&rdquo;</p></a>
+    <a class="hq in" data-goto="s-psub" style="--c:var(--c3);--t:var(--t3);--d:0.41s"><div class="hn"><span>03</span>Personalization Suite</div><p>&ldquo;When you drop a price or run a special, how do past prospects find out?&rdquo;</p></a>
+    <a class="hq in" data-goto="s-b0" style="--c:var(--c4);--t:var(--t4);--d:0.49s"><div class="hn"><span>04</span>Brand Suite</div><p>&ldquo;Do your buildings have different brands? Do you change your approach when occupancy drops?&rdquo;</p></a>
+    <a class="hq in" data-goto="s-f1" style="--c:var(--c5);--t:var(--t5);--d:0.57s"><div class="hn"><span>05</span>Fee Transparency Suite</div><p>&ldquo;Do prospects ever find fees they did not expect? Who keeps your fee lists current?&rdquo;</p></a>
+    <a class="hq in" data-goto="s-ab" style="--c:var(--c6);--t:var(--t6);--d:0.65s"><div class="hn"><span>06</span>Team Optimization</div><p>&ldquo;How do you coach your leasing agents on calls? How do you track what they follow up on?&rdquo;</p></a>
+  </div>
+  <div class="master in" style="--d:.8s"><span>Then ask</span>&ldquo;Which of these are most relevant to your business?&rdquo;</div>
+  <aside class="notes">Use this slide to pick where to spend time. Ask each question (or the ones that fit), then ask which are most relevant. Click any card to jump to that section. You do not have to present all six in depth.</aside>
 </section>
 
 <!-- =============================== 3 · THE BASICS TIMELINE =============================== -->
@@ -2196,7 +2225,7 @@ addEventListener('keydown',e=>{if(e.key==='o'||e.key==='O')goId('s-six')});
 
 /* ============================== pnav (deckroom-style jumper) ============================== */
 (function(){
-  const SECS=[['Intro','s-title'],['Overview','s-six'],['The basics','s-basics'],['01 Every Building, Every Stage','s-ebes'],['02 Central AI','s-c1'],['03 Personalization','s-psub'],['04 Brand Suite','s-b0'],['05 + 06 Fee & Team','s-fx'],['05 Fee Transparency','s-f1'],['06 Team Optimization','s-ab'],['Combined impact','s-all'],["What's next",'s-more'],['Results','s-chart']];
+  const SECS=[['Intro','s-title'],['Overview','s-six'],['How to use','s-how'],['The basics','s-basics'],['01 Every Building, Every Stage','s-ebes'],['02 Central AI','s-c1'],['03 Personalization','s-psub'],['04 Brand Suite','s-b0'],['05 + 06 Fee & Team','s-fx'],['05 Fee Transparency','s-f1'],['06 Team Optimization','s-ab'],['Combined impact','s-all'],["What's next",'s-more'],['Results','s-chart']];
   const at=id=>slides.findIndex(x=>x.id===id);
   const st=SECS.map(([n,id])=>[n,at(id)]).filter(x=>x[1]>=0).sort((a,b)=>a[1]-b[1]);
   const groups=st.map(([n,i],k)=>({n,from:i,to:(k+1<st.length?st[k+1][1]:slides.length)-1}));
